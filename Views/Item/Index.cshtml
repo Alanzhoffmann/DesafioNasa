@@ -1,0 +1,30 @@
+﻿@model ListaItemViewModel;
+@{
+   ViewData["Title"] = "Lista";
+}
+
+<table class="table table-striped table-hover">
+   <thead>
+      <tr>
+         <th>
+            Nome
+         </th>
+         <th>
+            Quantidade
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+        @foreach(var item in Model.Itens)
+        {
+            <tr>
+                <td>
+                    @item.Descricao
+                </td>
+                <td>
+                    @item.Prioridade
+                </td>
+            </tr>
+        }
+   </tbody>
+</table>
